@@ -59,8 +59,8 @@ end
 return {
   description = "Gets a random boobs or butts pic", 
   usage = {
-    "!boobs: Get a boobs NSFW image. 🔞",
-    "!butts: Get a butts NSFW image. 🔞"
+    "!boobs: دریافت یک عکس بوبز 🔞",
+    "!butts: دریافت یک عکس باتز 🔞"
   },
   patterns = {
     "^!boobs$",
@@ -70,7 +70,6 @@ return {
 }
 
 end
---Copyright; @behroozyaghi
---Persian Translate; @behroozyaghi
---ch : @nod32team
---کپی بدون ذکر منبع حرام است
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
