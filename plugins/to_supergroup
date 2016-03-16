@@ -57,7 +57,7 @@ local function run(msg, matches)
 
 if msg.to.type == 'chat' and matches[1] == 'tosuper' and permissions(msg.from.id, msg.to.id, "tosuper") then
 chat_upgrade('chat#id'..msg.to.id, ok_cb, false)
-return "Chat Upgraded Successful."
+return "گروه با موفقیت آپگرید شد"
 end
 
 if matches[1] == 'setdes' and matches[2] and permissions(msg.from.id, msg.to.id, "mod_pro") then
@@ -68,7 +68,7 @@ local text = matches[2]
 local chat = 'channel#id'..msg.to.id
 if msg.to.type == 'channel' then
 channel_set_about(chat, text, ok_cb, false)
-return "Group Topic Has Been Changed."
+return "تاپیک گروه عوض شد"
 end
 end
 
@@ -104,3 +104,6 @@ run = run
 }
 
 end
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
