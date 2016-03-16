@@ -3,13 +3,13 @@ do
 function run(msg, matches)
   return 'NOD32-BOT v8'.. VERSION .. [[ 
  
-  Developer : @Behroozyaghi
+  Developer : @mohammadarak
   
-  Channel : @Nod32team
+  Channel : @aviratgl
   
-  Open git : https://github.com/BH-YAGHI/NOD32-BOT.git
+  Open git : https://github.com/dram1135/avira-bot.git
   
-  NOD32 VERSION 8
+  Avira Version1.2
   
   All rights reserved.
   __________________]]
@@ -25,7 +25,7 @@ return {
 }
 
 end
---Copyright and edit; @behroozyaghi
---Persian Translate; @behroozyaghi
---ch : @nod32team
+--Copyright and edit; @mohammadarak
+--Persian Translate; @mohammadarak
+--ch : @aviratgl
 --کپی بدون ذکر منبع حرام است
