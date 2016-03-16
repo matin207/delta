@@ -422,15 +422,6 @@ ch: @aviratgl
 !lock fosh
 ممنوع کردن فحش
 
-!lock chat
-قفل چت ممنوع گروه
-
-!antibot enable 
-ورود ربات ها ممنوع
-
-!antibot disable
-ورود ربات ها ازاد
-
 !unlock xxxx
 [*name*leave*member]
 [*fosh*ads]
@@ -447,9 +438,6 @@ ch: @aviratgl
 
 !google
 سرچ مطلب مورد نظر از گوگل
- 
- !gps
- مکان کشور , شهر مورد نظر تحت گوگل
  
  !calc 3+1
  انجام محاسبات ریاضی
@@ -485,29 +473,6 @@ ch: @aviratgl
 
 !settings
 تنظیمات فعلی گروه
-
-10-filter word Mode ^
-
-!filter set (word)
-اضافه کردن کلمه جدید به لیست
-
-!filter del (word)
-حذف کلمه از لیست
-
-!filter warn (word)
-اخطار به کلمه فیتر شده
-
-!filterlist
-لیست کلمات فیلتر شده
-
-11-support ^
-
-!support
-دعوت سازنده ربات به گروه
-(در صورت وجود مشکل)
-
-!feedback (text)
-ارسال نظرات به سازنده
 
 you can use both "/" and "!" 
 .شما میتوانید از ! و / استفاده کنید
