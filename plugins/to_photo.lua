@@ -2,13 +2,13 @@ local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
     local file = 'data/stickers/'..msg.from.id..'.jpg'
-    print('File downloaded to:', result)
+    print('فایل دانلود شد به:', result)
     os.rename(result, file)
-    print('File moved to:', file)
+    print('فایل انتقال یافت به:', file)
     send_photo(get_receiver(msg), file, ok_cb, false)
     redis:del("sticker:photo")
   else
-    print('Error downloading: '..msg.id)
+    print('ارور در دانلود: '..msg.id)
     send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
   end
 end
@@ -24,7 +24,7 @@ local function run(msg,matches)
     end
     if matches[1] == "tophoto" and is_momod(msg) then
     	redis:set("sticker:photo", "waiting")
-    	return 'Please send your sticker now'
+    	return 'لطفا حالا استیکر را برایم ارسال کن'
     end
 end
 return {
