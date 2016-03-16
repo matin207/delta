@@ -25,7 +25,6 @@ do
   },
   run = run
  }
---Copyright; @mohammadarak
---Persian Translate; @mohammadarak
---ch : @aviratgl
---کپی بدون ذکر منبع حرام است
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
