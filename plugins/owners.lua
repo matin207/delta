@@ -1,5 +1,3 @@
-
-
 local function lock_group_namemod(msg, data, target)
   local group_name_set = data[tostring(target)]['settings']['set_name']
   local group_name_lock = data[tostring(target)]['settings']['lock_name']
@@ -315,7 +313,6 @@ return {
   },
   run = run
 }
---Copyright and edit; @behroozyaghi
---Persian Translate; @behroozyaghi
---ch : @nod32team
---کپی بدون ذکر منبع حرام است
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
