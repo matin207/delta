@@ -40,14 +40,6 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________
 
-
-Dont forgot update {structures.c} befor lunch [its anti GIF file]
-
-HOW DO MAKE UPDATE THIS FILE?
-
-see this git https://github.com/BH-YAGHI/tg.git
-
----------------------------------------------------------------------------------
 channel : https://telegram.me/aviratgl
 
 developer : https://telegram.me/mohammadarak
