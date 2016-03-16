@@ -1,7 +1,7 @@
 do
 
 function run(msg, matches)
-  return 'NOD32-BOT v8'.. VERSION .. [[ 
+  return 'Avirabot v1.2'.. VERSION .. [[ 
  
   Developer : @mohammadarak
   
@@ -25,7 +25,6 @@ return {
 }
 
 end
---Copyright and edit; @mohammadarak
---Persian Translate; @mohammadarak
---ch : @aviratgl
---کپی بدون ذکر منبع حرام است
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
