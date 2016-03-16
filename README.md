@@ -1,4 +1,4 @@
-😎 Avira is new and best bot 😎
+⚡️ Avira is new and best bot ⚡️
 _________________________________________________________________________________
 for install  
 ```bash
