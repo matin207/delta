@@ -1,6 +1,3 @@
-
-
-
 local function run(msg)
     
     local data = load_data(_config.moderation.data)
@@ -29,8 +26,6 @@ return {patterns = {
 "[Ww][Ww][Ww]:",
 "عضویت",
 }, run = run}
-
---Copyright and edit; @behroozyaghi
---Persian Translate; @behroozyaghi
---ch : @nod32team
---کپی بدون ذکر منبع حرام است
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
