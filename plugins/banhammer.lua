@@ -1,4 +1,3 @@
-
 local function pre_process(msg)
   -- SERVICE MESSAGE
   if msg.action and msg.action.type then
@@ -9,7 +8,7 @@ local function pre_process(msg)
       print('Checking invited user '..user_id)
       local banned = is_banned(user_id, msg.to.id)
       if banned or is_gbanned(user_id) then -- Check it with redis
-      print('User is banned!')
+      print('یوزر بن شد')
       local name = user_print_name(msg.from)
       savelog(msg.to.id, name.." ["..msg.from.id.."] is banned and kicked ! ")-- Save to logs
       kick_user(user_id, msg.to.id)
@@ -96,12 +95,12 @@ local function kick_ban_res(extra, success, result)
              return send_large_msg(receiver, "You can't kick yourself")
          end
          if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-            return send_large_msg(receiver, "You can't kick mods/owner/admins")
+            return send_large_msg(receiver, "شما قادر به بن کردن افراد نمی باشید")
          end
          return kick_user(member_id, chat_id)
       elseif get_cmd == 'ban' then
         if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-          return send_large_msg(receiver, "You can't ban mods/owner/admins")
+          return send_large_msg(receiver, "شما قادر به بن کردن افراد نمی باشید")
         end
         send_large_msg(receiver, 'User @'..member..' ['..member_id..'] banned')
         return ban_user(member_id, chat_id)
@@ -203,7 +202,7 @@ local function run(msg, matches)
         	redis:srem(hash, user_id)
         	local name = user_print_name(msg.from)
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return 'User '..user_id..' unbanned'
+        	return 'یوزر '..user_id..' بن شد'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -269,7 +268,7 @@ end
          	return false 
         end
         	banall_user(targetuser)
-       		return 'User ['..user_id..' ] globally banned'
+       		return 'یوزر ['..user_id..' ] بن گلوبالی شد'
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
@@ -289,7 +288,7 @@ end
           	return false 
         end
        		unbanall_user(user_id)
-        	return 'User ['..user_id..' ] removed from global ban list'
+        	return 'یوزر ['..user_id..' ] از لیست بن حذف شد'
       else
 	local cbres_extra = {
 		chat_id = msg.to.id,
@@ -328,3 +327,6 @@ return {
   run = run,
   pre_process = pre_process
 }
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
