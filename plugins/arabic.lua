@@ -19,3 +19,6 @@ return {
     },
     run = run
 }
+-- مدیر : @mohammadarak
+-- ربات : @avirabot
+-- هر گونه کپی برداری بدون ذکر منبع حرام است 
