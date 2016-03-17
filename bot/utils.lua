@@ -842,7 +842,7 @@ function get_message_callback_id(extra, success, result)
         local chat = 'chat#id'..result.to.id
         send_large_msg(chat, result.from.id)
     else
-        return 'Use This in Your Groups'
+        return 'از این در گروه استفاده کنید'
     end
 end
 
@@ -851,14 +851,14 @@ function Kick_by_reply(extra, success, result)
   if result.to.type == 'chat' then
     local chat = 'chat#id'..result.to.id
     if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't kick myself"
+      return "من نمی توانم افراد را کیک کنم"
     end
     if is_momod2(result.from.id, result.to.id) then -- Ignore mods,owner,admin
       return "you can't kick mods,owner and admins"
     end
     chat_del_user(chat, 'user#id'..result.from.id, ok_cb, false)
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه استفاده کنید'
   end
 end
 
@@ -867,14 +867,14 @@ function Kick_by_reply_admins(extra, success, result)
   if result.to.type == 'chat' then
     local chat = 'chat#id'..result.to.id
     if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't kick myself"
+      return "من نمی توانم افراد را کیک کنم"
     end
     if is_admin2(result.from.id) then -- Ignore admins
       return
     end
     chat_del_user(chat, 'user#id'..result.from.id, ok_cb, false)
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه استفاده کنید'
   end
 end
 
@@ -883,15 +883,15 @@ function ban_by_reply(extra, success, result)
   if result.to.type == 'chat' then
   local chat = 'chat#id'..result.to.id
   if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't ban myself"
+      return "من نمی توانم افراد را بن کنم"
   end
   if is_momod2(result.from.id, result.to.id) then -- Ignore mods,owner,admin
-    return "you can't kick mods,owner and admins"
+    return "شما نمی توانید مدیران و ناظمان را بن کنید"
   end
   ban_user(result.from.id, result.to.id)
-  send_large_msg(chat, "User "..result.from.id.." Banned")
+  send_large_msg(chat, "یوزر "..result.from.id.." بن شد")
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه استفاده کنید'
   end
 end
 
@@ -900,15 +900,15 @@ function ban_by_reply_admins(extra, success, result)
   if result.to.type == 'chat' then
     local chat = 'chat#id'..result.to.id
     if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't ban myself"
+      return "من نمی توانم افراد را بن کنم"
     end
     if is_admin2(result.from.id) then -- Ignore admins
       return
     end
     ban_user(result.from.id, result.to.id)
-    send_large_msg(chat, "User "..result.from.id.." Banned")
+    send_large_msg(chat, "یوزر "..result.from.id.." بن شد")
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه خود استفاده کنید'
   end
 end
 
@@ -917,21 +917,21 @@ function unban_by_reply(extra, success, result)
   if result.to.type == 'chat' then
     local chat = 'chat#id'..result.to.id
     if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't unban myself"
+      return "من نمی توانم افراد را آنبن کنم"
     end
-    send_large_msg(chat, "User "..result.from.id.." Unbanned")
+    send_large_msg(chat, "یوزر "..result.from.id.." آنبن شد")
     -- Save on redis
     local hash =  'banned:'..result.to.id
     redis:srem(hash, result.from.id)
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه استفاده کنید'
   end
 end
 function banall_by_reply(extra, success, result)
   if result.to.type == 'chat' then
     local chat = 'chat#id'..result.to.id
     if tonumber(result.from.id) == tonumber(our_id) then -- Ignore bot
-      return "I won't banall myself"
+      return "من نمی توانم افراد را بن کنم"
     end
     if is_admin2(result.from.id) then -- Ignore admins
       return 
@@ -939,8 +939,8 @@ function banall_by_reply(extra, success, result)
     local name = user_print_name(result.from)
     banall_user(result.from.id)
     chat_del_user(chat, 'user#id'..result.from.id, ok_cb, false)
-    send_large_msg(chat, "User "..name.."["..result.from.id.."] hammered")
+    send_large_msg(chat, "یوزر "..name.."["..result.from.id.."] همر شد")
   else
-    return 'Use This in Your Groups'
+    return 'از این در گروه استفاده کنید'
   end
 end
